@@ -1,5 +1,4 @@
 ---
-# tasks file for myrostadler.centos7_certbot
 - name: "Replace certificate lines in vhost file {{ certbot_modify_vhost_file }}"
   replace:
     path: "{{ certbot_modify_vhost_file }}"
@@ -10,7 +9,7 @@
       replace: '\1/etc/letsencrypt/live/{{ certbot_cert_domain_folder_name }}/cert.pem'
     - regexp: '(SSLCertificateKeyFile )(.*)$'
       replace: '\1/etc/letsencrypt/live/{{ certbot_cert_domain_folder_name }}/privkey.pem'
-  when: certbot_modify_vhost_file is defined
+  when: certbot_modify_vhost_file is defined and certbot_modify_vhost_file
 
 - name: Restart services
   service:

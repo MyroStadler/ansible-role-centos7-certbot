@@ -47,7 +47,6 @@ Example Playbook
   - include_role: 
       name: myrostadler.centos7_certbot
     vars:
-      certbot_modify_vhost_file: "/etc/httpd/conf.d/{{ install_dir_name }}.conf"
 ```
 
 License

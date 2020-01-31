@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: centos7_certbot
+  role_name: certbot
   description: Install certbot and replace cert paths in vhost file
   author: Myro Stadler
   license: GPL-3.0-only
@@ -8,5 +8,8 @@ galaxy_info:
     - name: EL
       versions:
         - 7
+    - name: Ubuntu
+      versions:
+        - bionic
 dependencies:
   - geerlingguy.certbot

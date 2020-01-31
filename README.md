@@ -1,5 +1,5 @@
-Centos7 certbot
-===============
+Certbot
+=======
 
 Install certbot and replace cert paths in vhost.
 
@@ -45,7 +45,7 @@ Example Playbook
 
   tasks:
   - include_role: 
-      name: myrostadler.centos7_certbot
+      name: myrostadler.certbot
     vars:
 ```
 
